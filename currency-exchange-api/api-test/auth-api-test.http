@@ -1,0 +1,24 @@
+### user registeration
+POST http://localhost:8080/api/v1/auth/signup
+Content-Type: application/json
+
+
+{
+  "email": "john_doe@doe.com",
+  "password": "john_Pa233324).34242"
+}
+
+### authnentication request
+POST http://localhost:8080/api/v1/auth/authenticate
+Content-Type: application/json
+
+{
+  "email": "john_doe@doe.com",
+  "password": "john_Pa233324).34242"
+}
+
+
+#### accessing authenticated controller
+GET http://localhost:8080/api/v1/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsYWIxMyIsImlhdCI6MTczNzc0NDExMywic3ViIjoiam9obl9kb2VAZG9lLmNvbSIsImF1dGhvcml0aWVzIjpbXSwiZXhwIjoxNzM3NzQ1MDEzfQ.0Cvqd7G9k9qMy8v4sPIradz7_DIbnr7tSjPzu5VWpfM
+

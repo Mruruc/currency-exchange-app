@@ -1,0 +1,60 @@
+###
+POST http://localhost:8080/api/v1/balance/deposit
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsYWIxMyIsImlhdCI6MTczODM2ODAxMiwic3ViIjoiam9obl9kb2VAZG9lLmNvbSIsImF1dGhvcml0aWVzIjpbXSwiZXhwIjoxNzM4MzY4OTEyfQ.kZAm_Ob37cG2piBWPILCsMTutfGZfvRJZhDjqzXKQeI
+
+{
+  "currency": "PLN",
+  "amount": 3000
+}
+
+
+
+###
+POST http://localhost:8080/api/v1/balance/create-account/PLN
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsYWIxMyIsImlhdCI6MTczODM3Mjk0Niwic3ViIjoiam9obl9kb2VAZG9lLmNvbSIsImF1dGhvcml0aWVzIjpbXSwiZXhwIjoxNzM4MzczODQ2fQ.4aUBaCWNxOAvBcd52vQ_5D0jsTIfBZ4NCd1okyhW4aw
+
+
+
+###
+POST http://localhost:${APPLICATION_SERVER_PORT:8080}/api/v1/balance/deposit
+Content-Type: application/json
+
+{
+  "currency": "EUR",
+  "amount": {}
+}
+
+###
+GET http://localhost:8080/api/v1/balance
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsYWIxMyIsImlhdCI6MTczODM3MzgyMywic3ViIjoiam9obl9kb2VAZG9lLmNvbSIsImF1dGhvcml0aWVzIjpbXSwiZXhwIjoxNzM4Mzc0NzIzfQ.Qcml3JedY-LKLLwmbVNMVqfvbMf8eBur0o5vfA8GsHk
+
+<> 2025-02-01T023749.200.json
+
+###
+GET http://localhost:8080/api/v1/balance
+
+<> 2025-02-01T174327.401.json
+
+###
+GET http://localhost:8080/api/v1/transactions
+
+###
+POST http://localhost:${APPLICATION_SERVER_PORT:8080}/api/v1/currency-exchange/purchase
+Content-Type: application/json
+
+{
+  "currency": "EUR",
+  "amountInPln": {}
+}
+
+###
+POST http://localhost:${APPLICATION_SERVER_PORT:8080}/api/v1/currency-exchange/sale
+Content-Type: application/json
+
+{
+  "currency": "EUR",
+  "amountToSell": {}
+}
+
